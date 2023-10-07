@@ -1,0 +1,37 @@
+.button{text-align:center; display:inline-block; vertical-align:top; background:#d4403f; color:#fff; font-family: 'Roboto', sans-serif; font-weight:300; border:none; line-height:inherit; font-size:18px; padding:18px 55px; cursor:pointer; transition:all ease .3s; position:relative; z-index:1}
+.button:before{width:0; left:0; top:0; height:100%; position:absolute; content:""; transition:all ease .3s; background:#e8005e; z-index:-1}
+.button:hover:before{width:100%}
+.cdbreadcrumb{margin:0 0 25px 0;padding:0 1.2em; background-color: #edeff0; border-radius: .25em;}
+.cdbreadcrumb::after{clear: both; content: ""; display: table;}
+.cdbreadcrumb li{display:inline-block; float:left;}
+.cdbreadcrumb li::after{display:inline-block; content:'\00bb'; margin:0 .6em; color:#959fa5;}
+.cdbreadcrumb li:last-of-type::after{display: none;}
+.cdbreadcrumb li > *{display: inline-block; color: #2c3f4c; padding:10px 0;}
+.cdbreadcrumb li.current > *{color:#319795; font-style: normal;}
+.no-touch .cdbreadcrumb a:hover{color: #96c03d;}
+.cdbreadcrumb.custom-separator li::after{content: ''; height: 16px; width: 16px; background: url(https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/img/cd-custom-separator.svg) no-repeat center center; vertical-align: middle;}
+.cdbreadcrumb.custom-icons li > *::before{content: ''; display: inline-block; height: 20px; width: 20px; margin-right: .4em; margin-top: -2px; background: url(https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/img/cd-custom-icons-01.svg) no-repeat 0 0; vertical-align: middle;}
+@media only screen and (min-width:768px) {
+  .cdbreadcrumb li::after{margin:0 1em;}
+}
+.contactPage{margin:40px 0 60px;}
+.contactTop{text-align:center; margin:40px 0 0 0}
+.contactTop h1{position:relative; font-size:76px; line-height:86px; margin:0; padding:0 0 26px 0}
+.contactTop h1:after{content:""; position:absolute; bottom:0; left:50%; margin:0 0 0 -61.5px; width:113px; height:9px; background:#d33f42}
+.contactTop h2{color:#0d0d0d; font-size:23px; line-height:32px; font-weight:300; margin:29px 0 0 0}
+.contactBlocks{background:#f4f4ef; padding:55px 0 40px; margin:45px 0}
+.contactBlocks ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap;}
+.contactBlocks ul li{width:32%; float:left; margin:0 2% 15px 0; background:#fff; padding:25px;}
+.contactBlocks ul li:last-child{margin:0 0 15px 0}
+.contactBlocks ul li h3{font-size:21px; line-height:30px; padding:0 60px 0 0}
+.contactBlocks ul li h4{margin-bottom:0; color:#d33f42; font-size:25px}
+.contactBlocks ul li h4 a{color:#d33f42}
+.formContactJustify{display:flex; justify-content:space-between;}
+.formGroup{margin:20px 0 0 0}
+.formContactJustify .formGroup{margin:20px 15px 0 0; width:100%}
+.formContactJustify .formGroup:last-child{margin:20px 0 0 0}
+.textField{background:#f2f2f2; height:54px; border:none; padding:0 30px; color:#0d0d0d; font-size:16px; letter-spacing:.5px; font-family: 'Roboto', sans-serif; width:100%}
+.textAreaField{background:#f2f2f2; height:54px; border:none; padding:15px 30px; height: 260px; color:#0d0d0d; font-size:16px; letter-spacing:.5px; font-family: 'Roboto', sans-serif; width:100%}
+.textField::-webkit-input-placeholder,.textAreaField::-webkit-input-placeholder {color:#000; opacity:1; overflow:hidden; resize:none;}
+.contactPage form span{display:block; font-size:22px; font-weight:700; line-height:32px; margin:50px 0 0 0; color:#000;}
+.contactPage form .button{margin:25px 0 0 0}
