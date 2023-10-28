@@ -1,15 +1,9 @@
-import Homepage from './Homepage/Homepage'
+import Image from 'next/image'
 
 export default function Home() {
-  console.log(process.env.NODE_ENV)
   return (
     <>
-      {
-        process.env.NODE_ENV == "development"?
-        <h1>You are on development mode</h1>
-        : <h1>You are on production mode</h1>
-      }
-      <Homepage />
+      <h1>asfd</h1>
     </>
   )
 }
