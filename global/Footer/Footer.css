@@ -1,0 +1,28 @@
+.footer{background:#f4f4ef; padding:35px 0 0 0}
+.footer .container{display:flex;}
+.widgetBlock{width:25%; padding:30px 0 0 0}
+.widgetBlock:first-child{width:30%; padding:30px 20px 0 0}
+.widgetBlock h4{color:#6e6e6c; font-size:20px; margin-top:0}
+.widgetBlock ul{list-style:none; margin:0; padding:0}
+.widgetBlock ul li{display:block; margin:0 0 8px}
+.widgetBlock ul li a{display:block; color:#000}
+.footerBottom{border-top:1px solid #979797; padding:23px 0 21px; margin:55px 0 0 0}
+.footerBottom .container{justify-content: space-between;}
+.copyright {display: inline-block; vertical-align: top;}
+.connect{display: inline-flex; align-items:center;}
+.connect ul{list-style: none; margin: 0; padding: 0;}
+.connect ul li{display: inline-block; vertical-align: top; margin: 0 0 0 15px;}
+.connect ul li a{width:32px; height:32px; border-radius: 50%; display:block;}
+
+@media(max-width:767px){
+.footer{padding:0}
+.copyright{margin: 25px 0 0 0}
+.button,.button1{font-size:15px; padding:12px 0; width:100%; margin:0 0 10px 0}
+.footer .container{display:block}
+.widgetBlock:first-child{width:100%; padding:30px 0 0 0}
+.widgetBlock {width: 100%;}
+.widgetBlock:nth-child(2),
+.widgetBlock:nth-child(3){width:50%; float:left}
+.widgetBlock:last-child{display:flex; flex-direction:column}
+
+}
