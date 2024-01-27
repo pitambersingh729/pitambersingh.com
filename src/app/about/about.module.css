@@ -1,0 +1,185 @@
+.mainPage{margin:50px 0 40px}
+.cdbreadcrumb {
+  margin: 0 0 20px 0;
+}
+
+.cdbreadcrumb::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.cdbreadcrumb li {
+  display: inline-block;
+  float: left;
+}
+
+.cdbreadcrumb li::after {
+  display: inline-block;
+  content: '\00bb';
+  margin: 0 .6em;
+  color: #959fa5;
+}
+
+.cdbreadcrumb li:last-of-type::after {
+  display: none;
+}
+
+.cdbreadcrumb li>* {
+  display: inline-block;
+  color: #2c3f4c;
+}
+
+.cdbreadcrumb li.current>* {
+  color: #96c03d;
+  font-style: normal;
+}
+
+.no-touch .cdbreadcrumb a:hover {
+  color: #96c03d;
+}
+
+.cdbreadcrumb.custom-separator li::after {
+  content: '';
+  height: 16px;
+  width: 16px;
+  background: url(https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/img/cd-custom-separator.svg) no-repeat center center;
+  vertical-align: middle;
+}
+
+.cdbreadcrumb.custom-icons li>*::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: .4em;
+  margin-top: -2px;
+  background: url(https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/img/cd-custom-icons-01.svg) no-repeat 0 0;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width:768px) {
+  .cdbreadcrumb li::after {
+    margin: 0 1em;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  max-width: 1125px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pageLeft {
+  width: 67.5%;
+}
+
+.pageLeft h1 {
+  margin: 0 0 20px 0;
+  color: #273954;
+  font-size: 24px
+}
+
+.pageContent {
+  margin: 10px 0 0 0
+}
+
+.pageContent p {
+  color: #0d0d0d;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 300;
+  margin: 0 0 20px 0
+}
+
+.pageContent p a {
+  color: #d33f42;
+  text-decoration: underline;
+}
+
+#sidebar {
+  width: 29%;
+}
+
+#sidebar .widgetAside:last-child {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  top: 70px
+}
+
+.widgetAside {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 25px;
+  width: 100%;
+  float: left;
+  margin: 0 0 40px 0; text-align: center;
+}
+
+.widgetAside h3 {
+  color: #273954;
+  margin: 12px 0 0;
+  font-weight: 700;
+  font-size:22px;
+  line-height: 32px;
+}
+
+.widgetOb {
+  margin: 0 15px 0 0; text-align: center;
+}
+
+.widgetOb span {
+  display: inline-block;
+  vertical-align: top;
+  width:120px;
+  height: 120px; border-radius: 50%; overflow: hidden; border:5px solid #eaeaea
+}
+
+.widgetAside p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  margin: 0;
+  clear: none;
+}
+
+.widgetAside .widgetOv {
+  overflow: hidden;
+}
+.profileButtons{display: flex; justify-content: space-between; margin:20px 0 0;}
+.profileButtons a{border:1px solid #942e79; display: inline-block; vertical-align: top; font-size: 16px; border-radius: 5px; padding:7px 30px; font-weight: 500; color: #942e79; transition: all ease .3s;}
+.profileButtons a:last-child{background-color: #942e79; color: #fff;}
+.profileButtons a:hover{background-color:#7a1c61; color: #fff;}
+
+.widgetAside ul li a {
+  display: inline-block;
+  vertical-align: top;
+  color: #000000;
+  position: relative;
+}
+
+
+@media(max-width:767px) {
+  .mainPage {
+    margin:40px 0 0 0
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .pageLeft {
+    width: 100%
+  }
+  #sidebar {
+    width: 100%;
+    margin: 20px 0 0 0
+  }
+}

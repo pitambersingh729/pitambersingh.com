@@ -6,17 +6,19 @@ const Footer = () =>{
             <footer className="footer">
                 <div className="container">
                     <div className="widgetBlock">
-                        <h4>About</h4>
-                        {/* <p>Collaborate with our Highly Skilled Professionals to Create User-centric Solutions and Drive Business Growth</p> */}
+                      <h4>About</h4>
+                      <p>A passionate frontend developer with a strong foundation in React.js, Next.js, HTML, CSS, WordPress, and JavaScript. My journey in the world of web development has equipped me with the skills to create dynamic and visually appealing user interfaces.</p>
                     </div>
                     <div className="widgetBlock">
-                        <h4>Skills</h4>
-                        {/* <ul>
-                            <li><a href="#">HTML5</a></li>
-                            <li><a href="#">CSS3</a></li>
-                            <li><a href="#">React</a></li>
-                            <li><a href="#">Google AMP</a></li>
-                        </ul> */}
+                      <h4>Skills</h4>
+                      <ul>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">CSS3</a></li>
+                        <li><a href="#">React.js</a></li>
+                        <li><a href="#">Next.js</a></li>
+                        <li><a href="#">WordPress</a></li>
+                        <li><a href="#">Google AMP</a></li>
+                      </ul>
                     </div>
                     <div className="widgetBlock">
                         <h4>Blogs</h4>
