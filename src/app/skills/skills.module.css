@@ -100,9 +100,6 @@
   background: #d33f42;
   color: #fff;
   padding: 5px 8px;}
-.skills li img {
-  max-width: 220px;
-}
 
 @media(max-width:767px) {
   .mainPage {
@@ -115,6 +112,16 @@
   .pageLeft {
     width: 100%
   }
+  .skills li{width: 48%; height: 170px; margin: 0 0 18px;}
+  .skills li:first-child img{max-width:80px}
+  .skills li:nth-child(2) img{max-width:95px}
+  .skills li:nth-child(3) img{max-width:77px}
+  .skills li:nth-child(4) img{max-width:72px}
+  .skills li:nth-child(5) img{max-width:80px}
+  .skills li:nth-child(6) img{max-width:62px}
+  .skills li:nth-child(7) img{max-width:66px}
+
+
   #sidebar {
     width: 100%;
     margin: 20px 0 0 0
