@@ -23,6 +23,7 @@ const Skills = () => {
                 width={120}
                 height={107}
               />
+              <span>React JS</span>
             </li>
             <li>
               <Image
@@ -31,6 +32,7 @@ const Skills = () => {
                 width={150}
                 height={90}
               />
+              <span>Next JS</span>
             </li>            
             <li>
               <Image
@@ -39,6 +41,7 @@ const Skills = () => {
                 width={105}
                 height={105}
               />
+              <span>AMP</span>
             </li>
             <li>
               <Image
@@ -47,7 +50,17 @@ const Skills = () => {
                 width={110}
                 height={110}
               />
+              <span>Javascript</span>
             </li>   
+            <li>
+              <Image
+                src="/wordpress.png"
+                alt="Wordpress"
+                width={120}
+                height={120}
+              />
+              <span>Wordpress</span>
+            </li> 
             <li>
               <Image
                 src="/html5.png"
@@ -55,6 +68,7 @@ const Skills = () => {
                 width={100}
                 height={114}
               />
+              <span>HTML5</span>
             </li> 
             <li>
               <Image
@@ -63,6 +77,7 @@ const Skills = () => {
                 width={100}
                 height={110}
               />
+              <span>CSS3</span>
             </li>                                               
           </ul>
         </div>
