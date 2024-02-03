@@ -38,6 +38,7 @@ const Header = () =>{
             <li><Link className={proximanova.className} href="/about">About</Link></li>
             <li><Link className={proximanova.className} href="/work">Work</Link></li>
             <li><Link className={proximanova.className} href="/skills">Skills</Link></li>
+            <li><Link className={proximanova.className} href="/ask-anything">Ask Anything</Link></li>
             <li><Link className={proximanova.className} href="/blog">Blog</Link></li>
             <li><Link className={proximanova.className} href="/contact">Contact</Link></li>
           </ul>
