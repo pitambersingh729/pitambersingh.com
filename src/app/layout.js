@@ -8,6 +8,17 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: 'Pitamber Singh',
   description: 'Learn Web Design &amp; Development with Pitamber Singh. I write tutorials about - HTML, CSS, JavaScript, React JS, Next JS & Responsive Web Design',
+  icons:{
+    icon:[
+      '/favicon-32x32.png'
+    ],
+    apple:[
+      '/apple-touch-icon.png'
+    ],
+    android: [
+      '/android-chrome-192x192.png'
+    ]
+  },
   // openGraph:{
   //   images:userData.featured_image,
   // },  
@@ -20,7 +31,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

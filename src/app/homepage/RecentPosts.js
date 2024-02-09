@@ -18,7 +18,7 @@ export default async function HomepageListing() {
         <div className={styles.storiesListingIn}>
         {
         users.map((item, index) => {
-          const { id, title, yoast_head_json, _embedded, featured_image, slug, categories_names} = item;
+          const { id, title, yoast_head_json, _embedded, featured_image, slug, categories_names, acf } = item;
             return (
               <>
                 <article>
@@ -36,9 +36,9 @@ export default async function HomepageListing() {
                     </div>
                     <div className={styles.articleCont}>
                     
-                    <span><Link href={`/${categories_names}`}>{categories_names}</Link></span>
-                        <h4 className={styles.storyHeading}><Link href={`/${slug}/${id}`}><div dangerouslySetInnerHTML={{ __html: `${title.rendered}` }} /></Link></h4>
-                      <h5><Link href={`/${slug}/${id}`}>Read More</Link></h5>
+                    <span><Link href="/blog">{categories_names}</Link></span>
+                    <h4 className={styles.storyHeading}><Link href={`/${slug}`}><div dangerouslySetInnerHTML={{ __html: `${title.rendered}` }} /></Link></h4>
+                      <h5><Link href={`/${slug}`}>Read More</Link></h5>
                     </div>
                 </article>
               </>

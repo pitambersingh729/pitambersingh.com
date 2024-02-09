@@ -47,24 +47,14 @@ export default function ChatComponent() {
           </div>
 
             <div className={styles.responses}>
-              {messages.map((message: Message) => {
+              {messages.map((message) => {
                 return (
                   <div className={styles.responseUser} key={message.id}>
-                    {/*  Name of person talking */}
-                    {/* {
-                        message.role === "assistant"
-                          ?
-                          <h3>My Response:</h3>
-                          :
-                          <h3>Your Question:</h3>
-                      } */}
-
-                    {/* Formatting the message */}
-                    {message.content.split("\n").map((currentTextBlock: string, index: number) => {
+                    {message.content.split("\n").map((currentTextBlock, number) => {
                       if (currentTextBlock === "") {
-                        return <p key={message.id + index}>&nbsp;</p>
+                        return <p key={message.id}>&nbsp;</p>
                       } else {
-                        return <p key={message.id + index}>{currentTextBlock}</p>
+                        return <p key={message.id}>{currentTextBlock}</p>
                       }
                     })}
                   </div>

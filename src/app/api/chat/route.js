@@ -11,9 +11,9 @@ const openai = new OpenAIApi(config);
 
 
 // POST localhost:3000/api/chat
-export async function POST(request: Request) {
-    const { messages } = await request.json(); // { messages: [] }
-
+export async function POST(request) {
+    //const { messages } = await request.json();
+    const messages = (await request.json()).messages;
     // messages [{ user and he says "hello there" }]
     console.log(messages);
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       model: 'gpt-3.5-turbo',
         stream: true,
         messages: [
-            { role: "system", content: "You are a helpful assistant. You explain software concepts simply to intermediate programmers."},
+            { role: "system", content: "You are a helpful assistant developed by Pitamber Singh. You explain software concepts simply to programmers."},
             ...messages
         ]
     })
