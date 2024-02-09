@@ -29,7 +29,11 @@ export default async function HomepageListing({ params: { id } }) {
           <h1 className="articleTitle" dangerouslySetInnerHTML={{ __html: `${userData.title.rendered}` }} />
           <div className="articleShareInfo">
             <span>{userData.yoast_head_json.author}</span> | 
-           
+            <span>
+              {userData.yoast_head_json.article_modified_time 
+              ? userData.yoast_head_json.article_modified_time 
+              : userData.yoast_head_json.article_published_time} 
+            </span>
           </div>
           <div className="entryContent">
             <div className="featuredImage">
