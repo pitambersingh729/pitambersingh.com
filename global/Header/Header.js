@@ -36,11 +36,11 @@ const Header = () =>{
           <Link className="logo" href="/"><Image src="/logo.png" quality={80} width={177} height={174} alt="Facebook" /></Link>
           <ul>
             <li><Link className={proximanova.className} href="/about">About</Link></li>
-            <li><Link className={proximanova.className} href="/work">Work</Link></li>
+            {/*<li><Link className={proximanova.className} href="/work">Work</Link></li>*/}
             <li><Link className={proximanova.className} href="/skills">Skills</Link></li>
             <li><Link className={proximanova.className} href="/ask-anything">Ask Anything</Link></li>
             <li><Link className={proximanova.className} href="/blog">Blog</Link></li>
-            <li><Link className={proximanova.className} href="/contact">Contact</Link></li>
+            {/*<li><Link className={proximanova.className} href="/contact">Contact</Link></li>*/}
           </ul>
           <div id="hamburger">
             <span></span>

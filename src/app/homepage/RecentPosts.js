@@ -21,7 +21,7 @@ export default async function HomepageListing() {
           const { id, title, yoast_head_json, _embedded, featured_image, slug, categories_names, acf } = item;
             return (
               <>
-                <article>
+                <article key={index}>
                     <div className={styles.articleLogo}>
                       <Link href={`/${slug}/${id}`}>
                         <Image

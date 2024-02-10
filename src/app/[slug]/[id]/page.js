@@ -30,7 +30,8 @@ export default async function HomepageListing({ params: { id } }) {
         day: "2-digit",
         year: "numeric",
       }
-  );  
+  );
+  
   return (
     <section className="blogpage">
       <div className="container">

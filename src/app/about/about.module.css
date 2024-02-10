@@ -166,6 +166,8 @@
   position: relative;
 }
 
+.featuredArticles .container{flex-direction: column;}
+.featuredArticlesIn{}
 
 @media(max-width:767px) {
   .mainPage {

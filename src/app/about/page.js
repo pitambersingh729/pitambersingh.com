@@ -48,8 +48,17 @@ const About = () => {
                 <a href="#">Message</a>
               </div>
             </div>
-          </aside>
+          </aside>       
         </div>
+        {/*<div className={styles.featuredArticles}>
+          <div className={styles.container}>
+            <h2>Featured Articles</h2>
+            <h3>Featured handcrafted articles about my thoughts and experiments.</h3>
+            <div className={styles.featuredArticlesIn}>
+            
+            </div>
+          </div>
+  </div>*/}
       </section>
     </>
   )
