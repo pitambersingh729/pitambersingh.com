@@ -4,6 +4,8 @@
 .blogpage .article-content-meta{margin: 15px 0 40px 0;}
 .articleShareInfo{margin:20px 0 0; position:relative; line-height:20px; font-size:15px; margin:0;}
 .articleShareInfo span{display:inline-block; vertical-align:top}
+.articleShareInfo span:first-child{padding:0 16px 0 0; position:relative;}
+.articleShareInfo span:first-child:after{content:""; position:absolute; right:7px; top:2px; width:1px; height:16px; background-color:#5c5c5c}
 .featuredImage{margin:15px 0 30px 0;}
 .alsoRead{background:rgba(81, 68, 169, 0.05); border-radius:4px; border-left:4px solid #5144A9; padding:15px; margin:0 0 26px 0;}
 .entryContent .alsoRead p{margin:0; color:#161616; font-size:16px; font-weight:700;}

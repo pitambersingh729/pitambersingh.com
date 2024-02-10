@@ -13,6 +13,24 @@ async function HomepagePostsAPI(id) {
 
 export default async function HomepageListing({ params: { id } }) {
   const userData = await HomepagePostsAPI(id);
+  const publishTime  = userData.yoast_head_json.article_published_time;
+  const modifyTime  = userData.yoast_head_json.article_modified_time;
+  const publishedDate = new Date(publishTime).toLocaleString(
+    "en-US",
+      {
+        month: "short",
+        day: "2-digit",
+        year: "numeric",
+      }
+  );
+  const modifiedDate = new Date(modifyTime).toLocaleString(
+    "en-US",
+      {
+        month: "short",
+        day: "2-digit",
+        year: "numeric",
+      }
+  );  
   return (
     <section className="blogpage">
       <div className="container">
@@ -28,11 +46,11 @@ export default async function HomepageListing({ params: { id } }) {
           <div className="clearfix"></div>
           <h1 className="articleTitle" dangerouslySetInnerHTML={{ __html: `${userData.title.rendered}` }} />
           <div className="articleShareInfo">
-            <span>{userData.yoast_head_json.author}</span> | 
+            <span>{userData.yoast_head_json.author}</span> 
             <span>
-              {userData.yoast_head_json.article_modified_time 
-              ? userData.yoast_head_json.article_modified_time 
-              : userData.yoast_head_json.article_published_time} 
+              {modifiedDate 
+              ? "Updated " + modifiedDate 
+              : "Posted " + publishedDate} 
             </span>
           </div>
           <div className="entryContent">
@@ -69,7 +87,7 @@ export async function generateMetadata({ params: { id } }) {
     description:description,
     keywords: keywords,
     openGraph:{
-      images:userData.featured_image,
+      images:userData.featured_image
     },
     twitter:{
       card:"summary_large_image",

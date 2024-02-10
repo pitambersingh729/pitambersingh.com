@@ -1,61 +1,86 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
 import styles from './Footer.css'
-const Footer = () =>{
+
+async function FooterPostsAPI() {
+const response = await fetch("https://xypherspot.com/api/wp-json/wp/v2/posts");
+if (!response.ok) {
+    throw new Error('failed to fetch users')
+}
+return await response.json()
+}
+
+export default async function Footer() {
+    const users = await FooterPostsAPI();
     return(
         <>
-            <footer className="footer">
+        <footer className="footer">
+            <div className="container">
+                <div className="widgetBlock">
+                    <h4>About</h4>
+                    <p>A passionate frontend developer with a strong foundation in React.js, Next.js, HTML, CSS, WordPress, and JavaScript. My journey in the world of web development has equipped me with the skills to create dynamic and visually appealing user interfaces.</p>
+                </div>
+                <div className="widgetBlock">
+                    <h4>Skills</h4>
+                    <ul>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">React.js</a></li>
+                    <li><a href="#">Next.js</a></li>
+                    <li><a href="#">WordPress</a></li>
+                    <li><a href="#">Google AMP</a></li>
+                    </ul>
+                </div>
+                <div className="widgetBlock">
+                    <h4>Blogs</h4>
+                    <ul>
+                        {
+                        users.map((item, index) => {
+                        const { id, title, slug} = item;
+                            return (
+                            <>
+                                <li>
+                                    <Link href={`/${slug}`} dangerouslySetInnerHTML={{ __html: `${title.rendered}` }}></Link>
+                                </li>
+                            </>
+                            )
+                        })
+                        }
+                    </ul>
+                </div>
+                <div className="widgetBlock">
+                    <h4>Latest Stories</h4>
+                    <ul>
+                        {
+                        users.map((item, index) => {
+                        const { id, title, slug} = item;
+                            return (
+                            <>
+                                <li>
+                                    <Link href={`/${slug}`} dangerouslySetInnerHTML={{ __html: `${title.rendered}` }}></Link>
+                                </li>
+                            </>
+                            )
+                        })
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div className="footerBottom">
                 <div className="container">
-                    <div className="widgetBlock">
-                      <h4>About</h4>
-                      <p>A passionate frontend developer with a strong foundation in React.js, Next.js, HTML, CSS, WordPress, and JavaScript. My journey in the world of web development has equipped me with the skills to create dynamic and visually appealing user interfaces.</p>
-                    </div>
-                    <div className="widgetBlock">
-                      <h4>Skills</h4>
-                      <ul>
-                        <li><a href="#">HTML5</a></li>
-                        <li><a href="#">CSS3</a></li>
-                        <li><a href="#">React.js</a></li>
-                        <li><a href="#">Next.js</a></li>
-                        <li><a href="#">WordPress</a></li>
-                        <li><a href="#">Google AMP</a></li>
-                      </ul>
-                    </div>
-                    <div className="widgetBlock">
-                        <h4>Blogs</h4>
-                        {/* <ul>
-                            <li><a href="#">React JS</a></li>
-                            <li><a href="#">Next JS</a></li>
-                            <li><a href="#">Web Stories</a></li>
-                            <li><a href="#">Javascript</a></li>
-                        </ul> */}
-                    </div>
-                    <div className="widgetBlock">
-                        <h4>Latest Stories</h4>
-                        {/* <ul>
-                            <li><a href="#">How To Get API Data In React JS And Display It On The Frontend?</a></li>
-                            <li><a href="#">What Is The Difference Between React JS And React Native?</a></li>
-                            <li><a href="#">What Is Routing In React JS And How Does It Work?</a></li>
-                            <li><a href="#">How To Add Types To Props And States Using TypeScript In React JS</a></li>
-                        </ul> */}
+                    <span className="copyright">&#169; 2024, Pitamber Singh. All Rights Reserved.</span>
+                    <div className="connect">
+                        {/* <span>Connect:</span> */}
+                        <ul>
+                            <li><a href="#"><Image src="/facebook.svg" quality={80} width={32} height={32} alt="Facebook" /></a></li>
+                            <li><a href="#"><Image src="/instagram.svg" quality={80} width={32} height={32} alt="Instagram" /></a></li>
+                            <li><a href="#"><Image src="/github.svg" quality={80} width={32} height={32} alt="GitHub" /></a></li>
+                            <li><a href="#"><Image src="/slack.svg" quality={80} width={32} height={32} alt="Slack" /></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div className="footerBottom">
-                    <div className="container">
-                        <span className="copyright">&#169; 2024, Pitamber Singh. All Rights Reserved.</span>
-                        <div className="connect">
-                            {/* <span>Connect:</span> */}
-                            <ul>
-                                <li><a href="#"><Image src="/facebook.svg" quality={80} width={32} height={32} alt="Facebook" /></a></li>
-                                <li><a href="#"><Image src="/instagram.svg" quality={80} width={32} height={32} alt="Instagram" /></a></li>
-                                <li><a href="#"><Image src="/github.svg" quality={80} width={32} height={32} alt="GitHub" /></a></li>
-                                <li><a href="#"><Image src="/slack.svg" quality={80} width={32} height={32} alt="Slack" /></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>         
+            </div>
+        </footer>         
         </>
     )
 }
-
-export default Footer;
