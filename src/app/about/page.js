@@ -66,8 +66,34 @@ const About = () => {
 
 export function generateMetadata() {
   return {
-    title: "Pitamber Singh | About Us",
-    description: "Programmer interested in React.JS, Next.JS, HTML5, CSS3, HTML6, Jquery, Javascript, Wordpress & AWS"
+    title: 'Pitamber Singh | About Us',
+    description: 'Learn Web Design & Development with Pitamber Singh. I write tutorials about - HTML, CSS, JavaScript, React JS, Next JS, Wordpress, Core Web Vitals, Google AMP & Responsive Web Design',
+    keywords: ['html tutorials', 'css tutorials', 'react js tutorials', 'next js tutorials', 'core web vitals', 'google amp', 'nextjs setup', 'nextjs routing', 'python', 'chatgpt implementation'],
+    icons:{
+      icon:[
+        '/favicon-32x32.png'
+      ],
+      apple:[
+        '/apple-touch-icon.png'
+      ],
+      android: [
+        '/android-chrome-192x192.png'
+      ]
+    },
+    alternates: {
+      canonical: '/',
+      languages: {
+        'en-US': '/en-US',
+      },
+    },
+    openGraph: {
+      images: '/homepage_og.png',
+    },
+    twitter: {
+      card: "summary_large_image",
+      title:"Pitamber Singh",
+      description: "Learn Web Design & Development with Pitamber Singh. I write tutorials about - HTML, CSS, JavaScript, React JS, Next JS, Wordpress, Core Web Vitals, Google AMP & Responsive Web Design",
+    }
   }
 }
 
