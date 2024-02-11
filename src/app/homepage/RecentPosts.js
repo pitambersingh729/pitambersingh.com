@@ -13,6 +13,7 @@ async function HomepagePostsAPI() {
 export default async function HomepageListing() {
   const users = await HomepagePostsAPI();
   return (
+
     <div className={styles.storiesListing}>
       <h3 className={styles.heading}><span>Stories</span></h3>
         <div className={styles.storiesListingIn}>

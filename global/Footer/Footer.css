@@ -7,7 +7,7 @@
 .widgetBlock ul li{display:block; margin:0 0 8px}
 .widgetBlock ul li a{display:block; color:#000}
 .footerBottom{border-top:1px solid #979797; padding:23px 0 21px; margin:55px 0 0 0}
-.footerBottom .container{justify-content: space-between;}
+.footerBottom .container{justify-content: space-between; align-items:center;}
 .copyright {display: inline-block; vertical-align: top;}
 .connect{display: inline-flex; align-items:center;}
 .connect ul{list-style: none; margin: 0; padding: 0;}

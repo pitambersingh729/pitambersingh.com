@@ -7,9 +7,9 @@
 .articleShareInfo span:first-child{padding:0 16px 0 0; position:relative;}
 .articleShareInfo span:first-child:after{content:""; position:absolute; right:7px; top:2px; width:1px; height:16px; background-color:#5c5c5c}
 .featuredImage{margin:15px 0 30px 0;}
-.alsoRead{background:rgba(81, 68, 169, 0.05); border-radius:4px; border-left:4px solid #5144A9; padding:15px; margin:0 0 26px 0;}
-.entryContent .alsoRead p{margin:0; color:#161616; font-size:16px; font-weight:700;}
-.entryContent .alsoRead a{color:#6359A6;}
+.alsoRead{background:rgba(211, 13, 66, 0.05); border-left:5px solid #d33f42; padding:15px; margin:0 0 35px 0;}
+.entryContent .alsoRead p{margin:0; color:#161616; font-size:16px; font-weight:700; line-height:24px}
+.entryContent .alsoRead p a{text-decoration:none; color: #161616; display:inline-block; vertical-align:top; font-size:15px; margin:5px 0 0 0;}
 .entryContent h2{font-size: 28px; line-height: 32px; font-weight: 700; margin:15px 0 15px 0;}
 .entryContent h3{font-size: 28px; line-height: 32px; font-weight: 700; margin: 36px 0 15px 0;}
 .entryContent h4{font-size: 24px; line-height: 30px; font-weight: 700; margin: 36px 0 10px 0;}
@@ -20,8 +20,8 @@
 .defaultPage .entry-Content p{font-size: 19px; line-height: 32px;}
 .entryContent p a,
 .entryContent ul li a,
-.entryContent ol li a{text-decoration: underline; font-weight: 400;}
-.entryContent p a.freeDownload {display: inline-block; vertical-align: top; padding: 10px 28px; border-radius: 5px; text-decoration: none; background:#5e83ea; color:#fff; font-size:18px;}
+.entryContent ol li a{text-decoration:underline; font-weight:400; color:#d33f42}
+.entryContent p a.freeDownload{display:inline-block; vertical-align:top; padding:10px 28px; border-radius:5px; text-decoration:none; background:#5e83ea; color:#fff; font-size:18px;}
 /*.wp-block-embed__wrapper{ position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
 .wp-block-embed__wrapper iframe, .wp-block-embed__wrapper object, .wp-block-embed__wrapper embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }*/
 
@@ -38,7 +38,8 @@ blockquote p{font-size:22px; line-height:42px; letter-spacing: 0.45px; font-weig
 .entryContent blockquote p span, blockquote p span{font-weight:700!important;}
 iframe:before,iframe:after{background-image:none;}
 .entryContent figure{margin:0 0 26px; position: relative;}
-.entryContent figcaption{font-size: 14px; line-height: 16px; color: #777777; font-family:'Roboto', sans-serif; font-weight:500; margin:17px 0 0 0;}
+.entryContent figcaption{font-size: 14px; line-height:normal; background:rgba(239,239,239,0.3); text-align:center; padding:10px; color:#777777; font-family:'Roboto', sans-serif}
+.entryContent figcaption:empty{display:none}
 .entry-Content h1, 
 .entry-Content h2, 
 .entry-Content h3, 
@@ -57,10 +58,11 @@ code[class*=language-],pre[class*=language-]{color:#fff;background:0 0;font-fami
 @media(max-width:767px){
 .blogpage {padding:30px 0;}
 .articleTut{margin:0 0 5px 0; border-bottom:1px solid #efefef; padding:0 0 25px 0;}
-.articleTitle{font-size: 28px; line-height: 34px; margin: 0 0 10px 0;}
+.articleTitle{font-size: 24px; line-height: 36px; margin: 0 0 10px 0;}
+.entryContent h2{font-size: 21px; line-height:34px}
 .catInfo{font-size:16px; margin:0 4px 0 0;}
 .publishedDate{font-size:16px;}
-.articleTut p{font-size:17px; line-height:24px;}
+.entryContent p,.entryContent li{font-size:16px; line-height:30px;}
 .entryContent blockquote p, blockquote p{font-size: 18px; line-height: 28px;}
 .defaultPage .entry-content p{line-height: 26px;}
 .pagetitle{font-size: 32px;}
