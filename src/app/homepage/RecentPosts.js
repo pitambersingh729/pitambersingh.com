@@ -10,19 +10,37 @@ async function HomepagePostsAPI() {
   return await response.json()
 }
 
-export default async function HomepageListing() {
+export default async function HomepageListing({ data }) {
   const users = await HomepagePostsAPI();
+  const [firstPost, remainingPosts] = users;
   return (
-
     <div className={styles.storiesListing}>
-      <h3 className={styles.heading}><span>Stories</span></h3>
-        <div className={styles.storiesListingIn}>
-        {
-        users.map((item, index) => {
-          const { id, title, yoast_head_json, _embedded, featured_image, slug, categories_names, acf } = item;
-            return (
-              <>
-                <article key={index}>
+      {/* <h3 className={styles.heading}><span>Stories</span></h3> */}
+        <article className={styles.fullStory}>
+          <div className={styles.articleLogo}>
+            <Image
+              src={firstPost.featured_image}
+              width={363}
+              height={246}
+              quality={70}
+              alt="Image"
+              priority
+            />
+          </div>
+          <div className={styles.articleCont}>
+          <span><Link href="/blog">{firstPost.categories_names}</Link></span>
+          <h4 className={styles.storyHeading}><div dangerouslySetInnerHTML={{ __html: `${firstPost.title.rendered}` }} /></h4>
+          <p>{firstPost.yoast_head_json.description}</p>
+          </div>
+        </article>
+  
+        <div className={styles.storiesListingIn}>       
+          {
+          users.slice(1).map((item, index) => {
+            const { id, title, featured_image, slug, categories_names, acf } = item;
+              return (
+                <>
+                  <article key={index}>
                     <div className={styles.articleLogo}>
                       <Link href={`/${slug}/${id}`}>
                         <Image
@@ -41,12 +59,12 @@ export default async function HomepageListing() {
                     <h4 className={styles.storyHeading}><Link href={`/${slug}`}><div dangerouslySetInnerHTML={{ __html: `${title.rendered}` }} /></Link></h4>
                       <h5><Link href={`/${slug}`}>Read More</Link></h5>
                     </div>
-                </article>
-              </>
-            )
-          })
-        }
-      </div>
+                  </article>
+                </>
+              )
+            })
+          }
+        </div>
     </div>
   )
 }

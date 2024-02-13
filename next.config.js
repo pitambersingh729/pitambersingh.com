@@ -2,11 +2,6 @@
 const nextConfig = {}
 
 module.exports = {
-  optimization: {
-    minimize: false
-  },
-  compress: false,
-  swcMinify: false,
   images: {
     remotePatterns: [
       {
