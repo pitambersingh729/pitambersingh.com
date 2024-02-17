@@ -113,357 +113,91 @@
   border-bottom: 2px solid #cbcbcb;
   padding: 20px 20px 20px 20px
 }
-
-.webVitalsNumber p small {
-  color: #d33f42;
-  font-weight: 700;
-  font-size: 48px;
-}
-
-.webVitalsNumber ul li:last-child p {
-  border-bottom: none;
-  padding-bottom: 0
-}
+.webVitalsNumber p small {color: #d33f42; font-weight: 700; font-size: 48px;}
+.webVitalsNumber ul li:last-child p {border-bottom: none; padding-bottom: 0}
 
 .projectList{margin: 0 0 70px;}
 .projectList ul{list-style:none; display: flex; align-items: center; justify-content: space-between; margin: 0; padding: 0;}
 .projectList ul li{position: relative; border-radius: 10px; overflow: hidden; width: 345px;}
-.projectList ul li .workInfo{position: absolute; bottom: 0; left: 0; width: 100%; padding:0 20px 15px;}
+/*.projectList ul li a{display:block;}*/
+.projectList ul li:after{content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.3);}
+.projectList ul li .workInfo{position: absolute; bottom: 0; left: 0; width: 100%; padding:0 20px 15px; z-index:1}
 .projectList ul li .workInfo span{color: #fff; font-size: 15px; line-height:22px; display: block; margin: 0 0 5px;}
 .projectList ul li .workInfo p{color: #fff; font-size: 22px; line-height:36px; margin: 0;}
 
-.workSamples {
-  background: #080807;
-  padding: 70px 0;
-}
-
-.workSamplesList {
-  list-style: none;
-  margin: 0 0 35px 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 10px;
-  background: #0c9b65;
-  border-radius: 15px;
-}
-
-.workSamplesList li {
-  display: inline-block;
-  vertical-align: top;
-  cursor: pointer;
-  border-radius: 15px;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 10px 20px
-}
-
-.workSamplesList li.active {
-  background: #000;
-  color: #fff
-}
-
-.workSamplesIn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.workSamples .projectImage img {
-  border-radius: 10px
-}
-
-.workSamples .projectDescriptions {
-  max-width: 550px;
-  padding: 0 0 0 50px
-}
-
-.workSamples .projectDescriptions h3 {
-  font-size: 54px;
-  font-weight: 500;
-  color: #fff;
-  margin: 0 0 20px 0;
-  line-height: 50px;
-}
-
-.workSamples .projectDescriptions h3 span {
-  color: #0c9b65;
-}
-
-.workSamples .projectDescriptions p {
-  font-size: 20px;
-  line-height: 31px;
-  color: #fff;
-  font-weight: 300
-}
-
-.workSamples .projectDescriptions .viewProject {
-  background: #ffffff;
-  border-radius: 8px;
-  line-height: normal;
-  text-align: center;
-  color: #191919;
-  padding: 16px 48px;
-  display: inline-block;
-  vertical-align: top;
-  margin: 10px 0 0 0;
-  font-size: 17px;
-}
-
-.storiesListingIn {
-  display: grid;
-  flex: 1 1 calc(100% - 325px);
-  grid-gap: 30px;
-  margin: 50px 0 40px 0;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))
-}
-
-.storiesListing article.fullStory {
-  display: flex;
-}
-
-.storiesListing article.fullStory .articleLogo {
-  width: 45%;
-  order: 2
-}
-
-.storiesListing article.fullStory .articleCont {
-  width: 55%;
-  padding: 0 60px 0 0
-}
-
-.storiesListing article.fullStory h4 {
-  font-size: 34px;
-  line-height: 44px;
-}
-
-.storiesListing article.fullStory p {
-  font-size: 19px;
-  line-height: 29px;
-  font-weight: 300;
-  margin: 10px 0 0 0
-}
-
-.storiesListing article {
-  margin: 0 0 30px 0;
-}
-
-.storiesListing article img {
-  box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 15%);
-  border-radius: 10px;
-  transform: translate3d(0, 0, 0);
-  transition: all ease .3s;
-  width: 100%;
-}
-
-.storiesListing article:hover img {
-  transform: scale(.8);
-  box-shadow: 0 20px 25px rgb(0 0 0 / 25%);
-}
-
-.storiesListing article span {
-  margin: 20px 0 0 0;
-  font-size: 14px;
-  line-height: 14px;
-  color: #191919;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.storiesListing article span a {
-  font-weight: 600;
-  color: #6359A6;
-}
-
-.storiesListing article h4 {
-  margin: 8px 0 0 0;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-.storiesListing article h4 a {
-  color: #000;
-}
-
-.storiesListing article h5 {
-  margin: 12px 0 0 0;
-  font-size: 14px;
-  line-height: 14px;
-  color: #191919;
-}
-
-.storiesListing article h5 a {
-  color: #000;
-}
-
-.articleCont p {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
-.technologiesUsed {
-  padding: 12px 0 0 0;
-  text-align: right;
-  display: flex;
-  justify-content: space-between;
-}
-
-.technologiesUsed h3 {
-  display: inline-block;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400
-}
-
-.technologiesUsed small {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 22px;
-  font-size: 12px;
-  padding: 0 4px;
-  color: #ce6644;
-  border: 1px solid #ce6644;
-  border-radius: 4px;
-  margin: 0 0 0 6px;
-}
+.workSamples {background: #080807; padding: 70px 0;}
+.workSamplesList {list-style: none; margin: 0 0 35px 0; display: flex; justify-content: space-between; padding: 8px 10px; background: #0c9b65; border-radius: 15px;}
+.workSamplesList li{display: inline-block; vertical-align: top; cursor: pointer; border-radius: 15px; font-size: 16px; font-weight: 400; padding: 10px 20px}
+.workSamplesList li.active {background: #000; color: #fff}
+.workSamplesIn {display: flex; justify-content: center; align-items: center;}
+.workSamples .projectImage img {border-radius: 10px}
+.workSamples .projectDescriptions {max-width: 550px; padding: 0 0 0 50px}
+.workSamples .projectDescriptions h3 {font-size: 54px; font-weight: 500; color: #fff; margin: 0 0 20px 0; line-height: 50px;}
+.workSamples .projectDescriptions h3 span {color: #0c9b65;}
+.workSamples .projectDescriptions p {font-size: 20px; line-height: 31px; color: #fff; font-weight: 300}
+.workSamples .projectDescriptions .viewProject {background: #ffffff; border-radius: 8px; line-height: normal; text-align: center; color: #191919; padding: 16px 48px; display: inline-block; vertical-align: top; margin: 10px 0 0 0; font-size: 17px;}
+.storiesListingIn {display: grid; flex: 1 1 calc(100% - 325px); grid-gap: 30px; margin: 50px 0 40px 0; grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))}
+.storiesListing article.fullStory {display: flex;}
+.storiesListing article.fullStory .articleLogo {width: 45%; order: 2}
+.storiesListing article.fullStory .articleCont {width: 55%; padding: 0 60px 0 0}
+.storiesListing article.fullStory h4 {font-size: 34px; line-height: 44px;}
+.storiesListing article.fullStory p {font-size: 19px; line-height: 29px; font-weight: 300; margin: 10px 0 0 0}
+.storiesListing article {margin: 0 0 30px 0;}
+.storiesListing article img {box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 15%); border-radius: 10px; transform: translate3d(0, 0, 0); transition: all ease .3s; width: 100%;}
+.storiesListing article:hover img {transform: scale(.8); box-shadow: 0 20px 25px rgb(0 0 0 / 25%);}
+.storiesListing article span {margin: 20px 0 0 0; font-size: 14px; line-height: 14px; color: #191919; display: inline-block; vertical-align: top;}
+.storiesListing article span a {font-weight: 600; color: #6359A6;}
+.storiesListing article h4 {margin: 8px 0 0 0; font-size: 22px; font-weight: 700; line-height: 32px;}
+.storiesListing article h4 a {color: #000;}
+.storiesListing article h5 {margin: 12px 0 0 0; font-size: 14px; line-height: 14px; color: #191919;}
+.storiesListing article h5 a {color: #000;}
+.articleCont p {display: -webkit-box; overflow: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+.technologiesUsed {padding: 12px 0 0 0; text-align: right; display: flex; justify-content: space-between;}
+.technologiesUsed h3 {display: inline-block; margin: 0; font-size: 16px; font-weight: 400}
+.technologiesUsed small {display: inline-block; vertical-align: top; line-height: 22px; font-size: 12px; padding: 0 4px; color: #ce6644; border: 1px solid #ce6644; border-radius: 4px; margin: 0 0 0 6px;}
 .historyCol{border-radius:10px; height: 240px; box-shadow:2px 2px 10px 2px rgb(0 0 0 / 15%); display: flex; align-items: center; justify-content: center;}
 .historyCol img{max-width: 220px;}
 .storiesListing article .historyCol img{box-shadow: none; border-radius:0;}
 
 
 @media(max-width:767px) {
-  .heading {
-    font-size: 28px;
-    margin: 0 0 25px 0
-  }
+.heading {font-size: 28px; margin: 0 0 25px 0}
+.heroPage {padding: 0;}
+.heroBanner{height:calc(60vh - 57px); display: flex; align-items:center; flex-direction:column; justify-content:center; padding:0}
+.heroBanner h1{margin:0 0 10px 0; font-size:35px; line-height:40px}
+.heroBanner h2{margin:0; padding:0 20px 15px 20px; font-size:25px; line-height:33px}
+.heroBanner h2:after{height:3px}
+.heroBanner p {font-size:18px; line-height:28px; margin:22px 0; padding:0 10px}
+.heroBanner p br{display:none}
+.webVitalsNumber {padding:25px 0 45px}
+.webVitalsNumber h3{font-size:20px; line-height:36px}
+.webVitalsNumber h3 span{padding:0 0 6px 0}
+.webVitalsNumber h3 span:befor{height:2px;}
+.webVitalsNumber ul {margin:10px 0 0 0}
+.webVitalsNumber p {font-size:23px; line-height:25px; padding:15px 0;}
+.webVitalsNumber p small{font-size:23px}
+.storiesListingIn{margin:30px 0; grid-gap:30px;}
+.storiesListing article {margin:0; padding:0 0 30px 0; border-bottom:1px solid #efefef;}
+.storiesListing article.fullStory{display: block;}
+.storiesListing article.fullStory .articleLogo{width:100%; order:1}
+.storiesListing article.fullStory .articleCont{width:100%; padding:0}
+.storiesListing article.fullStory h4{font-size:24px; line-height:34px}
+.storiesListing article.fullStory p{font-size:17px; line-height:27px}
+.storiesListingIn article:last-child{border-bottom:none; padding:0}
+.button,.button {font-size:15px; padding:12px 0; width:100%; margin:0 0 10px 0}
+.projectList{margin:0 0 30px}
+.projectList .container{padding-right:0}
+.projectList ul{overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; overflow-scrolling:touch}
+.projectList ul::-webkit-scrollbar{width:0; background:0}
+.projectList ul li{width: 225px; margin: 0 20px 0 0; flex-shrink:0}
+.projectList ul li .workInfo{padding:0 12px 10px}
+.projectList ul li .workInfo span{font-size: 13px; margin:0 0 4px;}
+.projectList ul li .workInfo p{font-size:16px; line-height:25px; font-weight:600}
 
-  .heroPage {
-    padding: 0;
-  }
-
-  .heroBanner {
-    height: calc(100vh - 57px);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0
-  }
-
-  .heroBanner h1 {
-    margin: 0 0 10px 0;
-    font-size: 35px;
-    line-height: 40px
-  }
-
-  .heroBanner h2 {
-    margin: 0;
-    padding: 0 20px 15px 20px;
-    font-size: 25px;
-    line-height: 33px
-  }
-
-  .heroBanner h2:after {
-    height: 3px
-  }
-
-  .heroBanner p {
-    font-size: 18px;
-    line-height: 28px;
-    margin: 22px 0;
-    padding: 0 10px
-  }
-
-  .heroBanner p br {
-    display: none
-  }
-
-  .webVitalsNumber {
-    padding: 25px 0 45px
-  }
-
-  .webVitalsNumber h3 {
-    font-size: 20px;
-    line-height: 36px
-  }
-
-  .webVitalsNumber h3 span {
-    padding: 0 0 6px 0
-  }
-
-  .webVitalsNumber h3 span:before {
-    height: 2px;
-  }
-
-  .webVitalsNumber ul {
-    margin: 10px 0 0 0
-  }
-
-  .webVitalsNumber p {
-    font-size: 23px;
-    line-height: 25px;
-    padding: 15px 0;
-  }
-
-  .webVitalsNumber p small {
-    font-size: 23px
-  }
-
-  .storiesListingIn {
-    margin: 30px 0;
-    grid-gap: 30px;
-  }
-
-  
-
-  .storiesListing article {
-    margin: 0;
-    padding: 0 0 30px 0;
-    border-bottom: 1px solid #efefef;
-  }
-
-  .storiesListing article.fullStory {
-    display: block;
-  }
-
-  .storiesListing article.fullStory .articleLogo {
-    width: 100%;
-    order: 1
-  }
-
-  .storiesListing article.fullStory .articleCont {
-    width: 100%;
-    padding: 0
-  }
-
-  .storiesListing article.fullStory h4 {
-    font-size: 24px;
-    line-height: 34px
-  }
-
-  .storiesListing article.fullStory p {
-    font-size: 17px;
-    line-height: 27px
-  }
-
-  .storiesListingIn article:last-child {
-    border-bottom: none;
-    padding: 0
-  }
-
-  .button,
-  .button1 {
-    font-size: 15px;
-    padding: 12px 0;
-    width: 100%;
-    margin: 0 0 10px 0
-  }
 }
 
 
-.articleTitle{font-family:'proxima_nova_condensedbold'; font-weight:700; font-size:32px; margin:5px 0 10px 0;line-height:40px;}
+.articleTitle{font-weight:700; font-size:32px; margin:5px 0 10px 0;line-height:40px;}
 .blogpage {
   width: 100%;
   float: left;
@@ -525,7 +259,6 @@
 .entryContent h2 {
   font-size: 28px;
   line-height: 32px;
-  font-family: 'proxima_nova_condensedbold';
   font-weight: 700;
   margin: 15px 0 15px 0;
 }
@@ -533,7 +266,6 @@
 .entryContent h3 {
   font-size: 28px;
   line-height: 32px;
-  font-family: 'proxima_nova_condensedbold';
   font-weight: 700;
   margin: 36px 0 15px 0;
 }
@@ -541,7 +273,6 @@
 .entryContent h4 {
   font-size: 24px;
   line-height: 30px;
-  font-family: 'proxima_nova_condensedbold';
   font-weight: 700;
   margin: 36px 0 10px 0;
 }
@@ -553,7 +284,6 @@
 .entryContent h5 {
   font-size: 23px;
   line-height: 28px;
-  font-family: 'proxima_nova_condensedbold';
   font-weight: 700;
   margin: 36px 0 10px 0;
 }
@@ -561,7 +291,6 @@
 .entryContent h6 {
   font-size: 18px;
   line-height: 28px;
-  font-family: 'proxima_nova_condensedbold';
   font-weight: 700;
   margin: 28px 0 10px 0;
 }

@@ -2,6 +2,7 @@ import styles from './home.module.css'
 import Herobanner from "./Herobanner";
 import RecentPosts from "./RecentPosts";
 import WebVitals from "./WebVitals";
+import WebStories from './web-stories/WebStories';
 // import Clients from "./Clients";
 // import LatestStories from "./LatestStories";
 
@@ -17,6 +18,7 @@ export default async function Homepage(){
         <RecentPosts />
 			</div>
       <WebVitals />
+      <WebStories />
 		</section>
     </>
   )

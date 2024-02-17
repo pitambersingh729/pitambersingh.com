@@ -18,18 +18,18 @@ export default async function HomepageListing({ data }) {
       {/* <h3 className={styles.heading}><span>Stories</span></h3> */}
         <article className={styles.fullStory}>
           <div className={styles.articleLogo}>
-            <Image
+            <Link href={`/${firstPost.slug}/${firstPost.id}`}><Image
               src={firstPost.featured_image}
               width={363}
               height={246}
               quality={70}
               alt="Image"
               priority
-            />
+            /></Link>
           </div>
           <div className={styles.articleCont}>
-          <span><Link href="/blog">{firstPost.categories_names}</Link></span>
-          <h4 className={styles.storyHeading}><div dangerouslySetInnerHTML={{ __html: `${firstPost.title.rendered}` }} /></h4>
+          <span><Link href={`/${firstPost.category_slugs}/${firstPost.slug}`}>{firstPost.categories_names}</Link></span>
+          <h4 className={styles.storyHeading}><Link href={`/${firstPost.category_slugs}/${firstPost.slug}/${firstPost.id}`} dangerouslySetInnerHTML={{ __html: `${firstPost.title.rendered}` }}></Link></h4>
           <p>{firstPost.yoast_head_json.description}</p>
           </div>
         </article>
@@ -56,7 +56,7 @@ export default async function HomepageListing({ data }) {
                     <div className={styles.articleCont}>
                     
                     <span><Link href="/blog">{categories_names}</Link></span>
-                    <h4 className={styles.storyHeading}><Link href={`/${slug}`}><div dangerouslySetInnerHTML={{ __html: `${title.rendered}` }} /></Link></h4>
+                    <h4 className={styles.storyHeading}><Link href={`/${slug}/${id}`} dangerouslySetInnerHTML={{ __html: `${title.rendered}` }}></Link></h4>
                       <h5><Link href={`/${slug}`}>Read More</Link></h5>
                     </div>
                   </article>
