@@ -6,25 +6,25 @@ import styles from './Header.css';
 const proximanova = localFont({
   src: [
     {
-      path:'../../fonts/proxima-nova-cond-bold-webfont.woff',
+      path:'./fonts/proxima-nova-cond-bold-webfont.woff',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../../fonts/proxima-nova-cond-bold-webfont.woff2',
+      path: './fonts/proxima-nova-cond-bold-webfont.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../../fonts/proxima-nova-condensed-webfont.woff',
+      path: './fonts/proxima-nova-condensed-webfont.woff',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../fonts/proxima-nova-condensed-webfont.woff',
+      path: './fonts/proxima-nova-condensed-webfont.woff',
       weight: '400',
       style: 'normal',
-    },        
+    },
   ],
 })
 

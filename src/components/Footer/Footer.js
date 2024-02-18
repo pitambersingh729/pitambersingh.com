@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from './Footer.css'
 
 async function FooterPostsAPI() {
-const response = await fetch("https://xypherspot.com/api/wp-json/wp/v2/posts");
+  const response = await fetch("https://pitambersingh.in/wp-json/wp/v2/posts");
 if (!response.ok) {
     throw new Error('failed to fetch users')
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from './page.css'
 
 async function HomepagePostsAPI(id) {
-  const response = await fetch(`https://xypherspot.com/api/wp-json/wp/v2/posts/${id}`);
+  const response = await fetch(`https://pitambersingh.in/wp-json/wp/v2/posts/${id}`);
   if (!response.ok) {
     throw new Error('failed to fetch users')
   }

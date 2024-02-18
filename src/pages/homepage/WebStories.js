@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import styles from '../home.module.css'
+import styles from './home.module.css'
 
 async function WebStoriesAPI() {
-  const response = await fetch("https://xypherspot.com/api/wp-json/custom/v1/web-stories");
+  const response = await fetch("https://pitambersingh.in/wp-json/custom/v1/web-stories");
   if (!response.ok) {
     throw new Error('failed to fetch users')
   }
@@ -34,7 +34,7 @@ export default async function WebStories({ data }) {
                     />
                     <div className={styles.workInfo}>
                       <span>{published_date}</span>
-                      <p><Link href={`/${slug}/${id}`}>{title}</Link></p>
+                      <p>{title}</p>
                     </div>
                   </li>                
                   </>

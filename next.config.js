@@ -6,8 +6,8 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'xypherspot.com',
-      },
+        hostname: 'pitambersingh.in',
+      }
     ],
   },
 }
