@@ -38,7 +38,7 @@ export default async function HomepageListing({ params: { id } }) {
         <div className="breadcrumbs">
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/blogs">{userData.categories_names}</Link></li>
+            <li><Link href="/">{userData.categories_names}</Link></li>
             <li dangerouslySetInnerHTML={{ __html: `${userData.title.rendered}` }} />
           </ul>
         </div>
@@ -50,8 +50,8 @@ export default async function HomepageListing({ params: { id } }) {
             <span>{userData.yoast_head_json.author}</span> 
             <span>
               {modifiedDate 
-              ? "Updated " + modifiedDate 
-              : "Posted " + publishedDate} 
+              ? "Updated On: " + modifiedDate 
+              : "Posted On: " + publishedDate} 
             </span>
           </div>
           <div className="entryContent">

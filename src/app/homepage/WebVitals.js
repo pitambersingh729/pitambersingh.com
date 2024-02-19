@@ -10,7 +10,7 @@ const WebVitals = () => {
           <li><p>LCP Under <small>2.0</small></p></li>
           <li><p>CLS Less Than <small>0.05</small></p></li>
           {/* <li><p>FID <small>30 - 50</small></p></li> */}
-          <li><p>INP <small>50 - 120</small></p></li>
+          <li><p>INP <small>50 - 80</small></p></li>
         </ul>
       </div>
     </>

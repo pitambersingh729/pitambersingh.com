@@ -39,15 +39,15 @@ const Header = () =>{
             {/*<li><Link className={proximanova.className} href="/work">Work</Link></li>*/}
             <li><Link className={proximanova.className} href="/skills">Skills</Link></li>
             <li><Link className={proximanova.className} href="/ask-anything">Ask Anything</Link></li>
-            <li><Link className={proximanova.className} href="/blog">Blog</Link></li>
+            {/*<li><Link className={proximanova.className} href="/blog">Blog</Link></li>*/}
             {/*<li><Link className={proximanova.className} href="/contact">Contact</Link></li>*/}
           </ul>
-          <div id="hamburger">
+          {/*<div id="hamburger">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </div>*/}
         </div>
       </header>
     </>

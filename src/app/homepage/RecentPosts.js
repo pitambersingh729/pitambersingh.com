@@ -36,8 +36,8 @@ export default async function HomepageListing({ data }) {
   
         <div className={styles.storiesListingIn}>       
           {
-          users.slice(1).map((item, index) => {
-            const { id, title, featured_image, slug, categories_names, acf, category_slugs } = item;
+            users.slice(1).map((item, index) => {
+            const { id, title, featured_image, slug, categories_names, acf, category_slugs, name } = item;
               return (
                 <>
                   <article key={index}>
