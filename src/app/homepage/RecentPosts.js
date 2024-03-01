@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from './home.module.css'
 
 async function HomepagePostsAPI() {
-  const response = await fetch("https://pitambersingh.in/wp-json/wp/v2/posts");
+  const response = await fetch("https://pitambersingh.in/wp-json/wp/v2/posts", { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('failed to fetch users')
   }
@@ -22,7 +22,7 @@ export default async function HomepageListing({ data }) {
               src={firstPost.featured_image}
               width={363}
               height={246}
-              quality={70}
+              quality={100}
               alt="Image"
               priority
             /></Link>
